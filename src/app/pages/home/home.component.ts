@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { AfterViewInit, Component, OnInit, afterNextRender, afterRender } from '@angular/core';
 import { ViewportScroller } from '@angular/common';
 import { Tech } from 'src/app/types/Tech.type';
 
@@ -7,7 +7,7 @@ import { Tech } from 'src/app/types/Tech.type';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.sass']
 })
-export class HomeComponent {
+export class HomeComponent implements OnInit {
 
   hideSpace: boolean = false;
 
