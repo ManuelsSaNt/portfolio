@@ -113,14 +113,15 @@ Los usuarios de teclado deben atravesar los 4 botones del nav en cada página.
 `id="main"` al `<main>` (incluyendo las páginas que hoy no lo tienen, ver A3).
 
 ### A3 — Falta landmark `<main>` en proyectos y 404
-**Estado:** [ ]
+**Estado:** [x]
 **Archivos:** `views/projects/ProjectPage.astro`, `views/404/NotFound.astro`.
 
 `/`, `/links` y `/aviso-de-privacidad` sí tienen `<main>`. Las páginas de proyecto y el 404
 no, por lo que no hay landmark de contenido principal (regla axe `landmark-one-main`).
 
-**Corrección sugerida:** envolver el contenido de `ProjectPage.astro` y `NotFound.astro`
-en `<main>`, o centralizar el landmark en `Layout.astro`.
+**Corrección aplicada:** el contenedor raíz de `ProjectPage.astro` y `NotFound.astro`
+ahora es `<main>` (mismas clases, sin cambios visuales). Verificado: una sola landmark
+`<main>` por página en el build.
 
 ### A4 — Jerarquía de headings con saltos (heading-order)
 **Estado:** [x]
